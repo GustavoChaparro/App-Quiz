@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
+/*===== VARIABLES CSS Y SASS =====*/
+/*Varibles sass*/
+/*Variables css*/
+/*===== Colores =====*/
+:root {
+	--color1: rgb(219,144,.5);				/* Color Naranja*/
+	--color2: rgba(23, 180, 83, 0.877);		/* Color Verde*/
+	--color3: rgba(11,194,211, 0.623);		/* Color */
+	--color4: #fff;							/* Color Blanco*/
+	--color5: #000;							/* Color Negro*/
+	--color6: #BDBDBD;
+	--color7: crimson;
+	--color8: #12192C;
+	--color9: #F5A623;
+	--color10: #EDEDED;
+	--color11: #000;
+}
+main{
+	width: 100%;
+	max-width: 1150px; /*Tamaño de la caja interna - Main*/
+	margin: auto;	
+}
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+}
+/* *.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.* */
+/* *. all similar content styling codes                                   Diseñado por Gustavo Chaaprro .*.* */
+/* *.                                                                                                   .*.* */
+/* *.                                                                                                   .*.* */
+/* *.                                                                     Caracas, Creado 12 Ene 2021   .*.* */
+/* *.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.* */
+section{
+    padding: 100px 0;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.play, footer{
+  font-family: 'AvantGarde';
+}
+.play .play-content{
+	background:;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: var(--color1);
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+/* *.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.* */
+/* *. Menu Lateral - Sidebar menu                                         Diseñado por Gustavo Chaaprro .*.* */
+/* *.                                                                                                   .*.* */
+/* *.                                                                                                   .*.* */
+/* *.                                                                     Caracas, Creado 25 Ene 2021   .*.* */
+/* *.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.* */
+
+/*===== Fuente y tipografia =====*/
+:root {
+  --body-font: 'Quicksand', sans-serif;
+  --small-font-size: 0.875rem;
+}
+@media screen and (min-width: 768px) {
+  :root {
+    --small-font-size: 0.938rem;
+  }
+}
+/*===== z index =====*/
+:root {
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+/*===== BASE =====*/
+*, ::before, ::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body {
+  position: relative;
+  margin: 0;
+  padding: 1rem 0 0 5rem;
+  font-family: var(--body-font);
+  background-color: var(--color4);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+h1 {
+  margin: 0;
+}
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/*=====  NAV =====*/
+.l-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 56px;
+  height: 100vh;
+  background-color: var(--color5);
+  padding: 1.25rem .5rem 2rem;
+  -webkit-transition: .5s;
+  transition: .5s;
+  z-index: var(--z-fixed);
+}
+.nav {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+}
+.nav__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+  padding: 0 .5rem;
+}
+.nav__logo-icon {
+  margin-right: 1.2rem;
+}
+.nav__logo-text {
+  color: var(--color10);
+  font-weight: 700;
+}
+.nav__toggle {
+  position: absolute;
+  top: 1.10rem;
+  right: -.6rem;
+  width: 18px;
+  height: 18px;
+  background-color: var(--color9);
+  border-radius: 50%;
+  font-size: 1.25rem;
+  color: var(--color8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+.nav__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .5rem;
+  margin-bottom: 1rem;
+  border-radius: .5rem;
+  color: var(--color10);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+.nav__link:hover {
+  background-color: var(--color9);
+  color: var(--color8);
+}
+.nav__icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.nav__text {
+  font-weight: 700;
+}
+/*Show menu*/
+.show {
+  width: 168px;
+}
+/*Rotate toggle*/
+.rotate {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+/*Active links menu*/
+.active {
+  background-color: var(--color9);
+  color: var(--color8);
+}
+/*Add padding body*/
+.expander {
+  padding: 1rem 0 0 12rem;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+/* *.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.* */
+/* *. play section styling                                                Diseñado por Gustavo Chaaprro .*.* */
+/* *.                                                                                                   .*.* */
+/* *.                                                                                                   .*.* */
+/* *.                                                                     Caracas, Creado 12 Ene 2021   .*.* */
+/* *.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.* */
+.play{
+    color:#fff;
+    background: #111;
+}
+.play .title::before{
+    background: #fff;
+}
+.play .title::after{
+    content: "App Quiz";
+	background: #111;
+}
+*::selection {
+	background:#33257E ;
+	color:#fff;
+}
+*::-moz-selection {
+	background:#33257E;
+	color:#fff;
+}
+.contenedor {
+	max-width:500px;
+	width: 90%;
+	margin: 40px auto;
+}
+#container{
+	width:;
+	background:;
+	margin:20px auto;
+	overflow:auto;
+	padding:;
+}
+header{
+	text-align:center;
+	border-bottom:#FFF dashed 1px;
+}
+header h1{
+	margin:0;
+	margin-top:0;
+	color:yellow;
+}
+header p{
+	padding:0;
+	margin-top:;
+	color:;
+}
+h3{
+	color:var(--color1);
+}
+section{
+	min-height:410px;
+	padding:10px;
+}
+input[type='submit']{
+	background:var(--color1);
+	border:0;
+	color:#fff;
+	padding:10px 15px;
+	cursos:pointer;
+	margin-bottom:center;
+}
+#resultado h3{
+	background:var (--color1);
+	padding:10px;
+	margin:10px 0;
+}
+#resultado span{
+	color:var (--color1);
+	font-weight:bold;
+}
+/* *.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.* */
+/* *. footer section styling                                              Diseñado por Gustavo Chaaprro .*.* */
+/* *.                                                                                                   .*.* */
+/* *.                                                                                                   .*.* */
+/* *.                                                                     Caracas, Creado 12 Ene 2021   .*.* */
+/* *.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.* */
+footer{
+    background: #111;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+}
+footer span a{
+    color: var(--color1);
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
